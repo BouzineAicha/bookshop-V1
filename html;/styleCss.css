@@ -1,0 +1,57 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+Body{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    
+}
+nav{
+    width: 100%;
+    height: auto;
+    background-color: #423954;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+  .logo{
+width: 80px;
+height: auto;
+}
+.navlinks{
+    margin-top: 20px;
+    margin-left:400px;
+}
+ .navlinks ul li {
+   
+     list-style: none;
+display: inline;
+justify-content: space-between;
+font-size: 30px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-style: bold;
+gap: 20px;
+
+ }
+ .navlinks ul li a{
+color: white;
+text-decoration: none;
+color:#fff;
+padding:50px;
+outline:none;
+
+
+
+
+ }
+ .navlinks ul li a:hover{
+     background-color: white;
+     color:#ab9ec5 ;
+ }
+ 
