@@ -1,57 +1,222 @@
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+Body {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+}
+nav {
+  width: 100%;
+  height: auto;
+  background-color: #423954;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+.navlinks {
+  margin-top: 20px;
+  margin-left: 400px;
+}
+.navlinks ul li {
+  list-style: none;
+  display: inline;
+  justify-content: space-between;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold;
+  gap: 20px;
+}
+.navlinks ul li a {
+  color: white;
+  text-decoration: none;
+  color: #fff;
+  padding: 50px;
+  outline: none;
+}
+.navlinks ul li a:hover {
+  background-color: white;
+  color: #ab9ec5;
+}
+#searchbtn{
+    width:500px;
+    height:50px;
+    margin-left:30%;
+    margin-top:50PX;
+    border-radius:18px;
+    font-size: 20px;
+}
+::placeholder{
+    font-family: work sans,sans-serif;
+    font-size: 15px;
+    font-style: italic;
+}
+form.search button {
+  
+  width: 50px;
+  height: 50px;
+  border-radius: 19px;
+  background: #423954;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+form.search button:hover {
+    background: #ab9ec5;
+  }
+/* foooooooooooooooooooooooooooooooooooooooooooooorm */
+.formation input {
+    width:500px;
+    height:50px;
+    margin-left:30%;
+    margin-top:50PX;
+    border-radius:18px;
+    font-size: 20px;
+}
+::placeholder{
+    font-family: work sans,sans-serif;
+    font-size: 15px;
+    font-style: italic;
+}
+.radio{
+    display:inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.radio-input{
+    display: none;
+}
+.radio-inp{
+text   white-space: nowrap;
 }
 
 
 
-Body{
-    width: 100%;
-    height: auto;
-    padding: 0px;
-    margin: 0px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* foooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooter */
+  footer{
+      margin: 0px;
+      padding: 0px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-color: #423954;
+
+  }
+
+  .contact {
+    background-color:#110A1D;
+  }
+  .contact ul li {
+     
+    margin-left: 250px;
+    list-style: none;
+    display: inline;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+    gap: 20px;
+  }
+  .contact ul li a {
+    color: white;
+    text-decoration: none;
+
+    padding: 10px;
+    outline: none;
     
+    
+  }
+  .contact ul li a:hover {
+    background-color: white;
+    color: #ab9ec5;
+  }
+
+.contact li a.fa{
+    font-size: 30px;
+    color: white;
 }
-nav{
-    width: 100%;
-    height: auto;
-    background-color: #423954;
-    display: grid;
-    grid-template-columns: auto auto;
+p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 30px;
+    font-size: 14px;
 }
-
-  .logo{
-width: 80px;
-height: auto;
+.go{
+    width: 40%;
+    height:auto;
 }
-.navlinks{
-    margin-top: 20px;
-    margin-left:400px;
-}
- .navlinks ul li {
-   
-     list-style: none;
-display: inline;
-justify-content: space-between;
-font-size: 30px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-style: bold;
-gap: 20px;
-
- }
- .navlinks ul li a{
-color: white;
-text-decoration: none;
-color:#fff;
-padding:50px;
-outline:none;
-
-
-
-
- }
- .navlinks ul li a:hover{
-     background-color: white;
-     color:#ab9ec5 ;
+.footer{
+      display: grid;
+      grid-template-columns: auto auto auto;
+  }
+  .links{
+      margin-right:400px;
+  }
+  .links ul li {
+      margin-top: 30px;
+      list-style: none;
+      color: white;
+      font-size: 14px;
+      line-height: 20px;
+      text-shadow:  2px 2px 6px #181818;
+  }
+  .links ul li a{
+      color:white
+  }
+  .links ul li :hover{
+      color: thistle;
+  }
+  footer .social {
+      color: white;
+    text-align:center;
+    padding-bottom:25px;
+    margin-top: 30px;
+  }
+  
+  footer .social > a {
+     
+    font-size:34px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:3px solid #ccc;
+    
+    margin:0 20px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  footer .social > a:hover {
+    opacity:2;
+    color: #110A1D;
+  }
+  .coppyrght{
+      background-color: #110A1D;
+      color: #fff;
+  }
+ span{
+     color:#A091C0 ;
  }
  
