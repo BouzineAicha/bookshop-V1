@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="styleCss.css" />
-    
+
 
 </head>
 
@@ -31,109 +31,96 @@
 
     </nav>
     <main>
-        <div id="error"></div>
-        <form id="form" action="/" methode="GET">
-            <div class="jjjjjjjjjjjj">
-                <div class="Section">
-                    <div class="profile-pic">
+        <form action="" id="form" action="/" method="get" autocomplete="off" onsubmit="onformSubmit()">
 
-                        <img src="/Vector.jpg" id="output" />
-                        <input type="file" id="file" accept="image*/">
-                        <label for="file" class="lable">
-                            +Add img
-                        </label>
-                    </div>
+            <div class="formation">
+                <div>
+                    <h1>Book title :</h1>
                 </div>
-                <div class="sectiono">
-                    <div class="storytitle">
-                        <h6> + Add story</h6>
-                        
-                        <div class="text">
-                            <input type="text" placeholder="Title.." id="titlestory">
-                        </div>
-                        <h5 id="mesg1"></h5>
-                        
-                        <br><textarea id="textarea" cols="60" rows="10" placeholder=" Discription..." ></textarea>
-                        <h5 id="mesg2"></h5>
-                    </div>
-                    <button type="button " id="buttono">Done</button>
+                <div>
+                    <input type="text" name="formbtn" placeholder="title..." id="title">
+                    <h5 id="mesg3"></h5>
                 </div>
-            </div> 
+                <div>
+                    <h1>Author Name :</h1>
+                </div>
+                <div>
 
-    <form action="" id="form" action="/" method="get">
-        <div class="formation">
-            <div>
-                <h1>Book title :</h1>
-            </div>
-            <div>
-                <input type="text" name="formbtn" placeholder="title..." id="title">
-                <h5 id="mesg3"></h5>
-            </div>
-            <div>
-                <h1>Author Name :</h1>
-            </div>
-            <div>
-
-                <input type="text" name="formbtn" placeholder="Name of author.." id="name">
-                <h5 id="mesg4"></h5>
-            </div>
-            <div>
-                <h1>Types :</h1>
-            </div>
-            <div class="fieldset">
+                    <input type="text" name="formbtn" placeholder="Name of author.." id="name">
+                    <h5 id="mesg4"></h5>
+                </div>
+                <div>
+                    <h1>Types :</h1>
+                </div>
+                <div class="fieldset">
 
 
-                <input type="radio" name="r"  class="radio"/>&ensp;<label>Novel</label>
-                <input type="radio" name="r" class="radio" />&ensp; <label>Essay</label>
-                <input type="radio" name="r"  class="radio"/>&ensp; <label>Comic</label>
-                <h4 id="mesg5"></h4>
+                    <input type="radio" name="r" class="radio" />&ensp;<label>Novel</label>
+                    <input type="radio" name="r" class="radio" />&ensp; <label>Essay</label>
+                    <input type="radio" name="r" class="radio" />&ensp; <label>Comic</label>
+                    <h4 id="mesg5"></h4>
+                </div>
+
+                <div>
+
+                    <h1>Date of publication :</h1>
+                </div>
+                <div>
+
+                    <input type="date" name="formbtn" placeholder="DD/MM/YYYY" id="date">
+                    <h5 id="mesg6"></h5>
+                </div>
+
+                <div>
+                    <h1>Price :</h1>
+                </div>
+                <div>
+                    <input type="number" name="formbtn" placeholder="&ensp;......" id="price">
+                    <h5 id="mesg8"></h5>
+                </div>
+                <div>
+                    <h1>The language of the book :</h1>
+                </div>
+                <div>
+
+                    <select id="lang">
+                        <option value=""> select </option>
+                        <option value="English">English</option>
+                        <option value="Arabic">Français</option>
+                        <option value="Frensh">Arabe</option>
+                    </select>
+                    <h5 id="mesg7"></h5>
+                </div>
             </div>
 
-            <div>
+            <button type="submit" onclick="onFormSubmit()" id="Done">Submit</button>
+            <input type="button" onclick="resetFormm()" value="Reset" id="rest">
 
-                <h1>Date of publication :</h1>
-            </div>
-            <div>
 
-                <input type="date" name="formbtn" placeholder="DD/MM/YYYY" id="date">
-                <h5 id="mesg6"></h5>
-            </div>
-            
-            <div>
-                <h1>Price :</h1>
-            </div>
-            <div>
-        <input type="number" name="formbtn" placeholder="&ensp;......" id="price">
-                <h5 id="mesg8"></h5>
-            </div>
-            <div>
-                <h1>The language of the book :</h1>
-            </div>
-            <div>
-
-                <select id="lang" >
-                    <option value=""> select </option>
-                     <option value="English">English</option>
-                     <option value="Arabic">Français</option>
-                     <option value="Frensh">Arabe</option>
-                 </select>
-                 <h5 id="mesg7"></h5>
-           </div>
-            </div>
-            
-            <button type="submit" id="Done">Submit</button>
         </form>
-        <table>
-        <tr>
-            <th> Book Title</th>
-            <th>Author Name</th>
-            <th>Date Of Publication</th>
-            <th>language</th>
-            <th>Type</th>
-            <th>Price</th>
-            <th>Update</th>
-        </tr>
-    </table>
+        <td>
+            <table class="list" id="employeeList">
+                <thead>
+                    <tr>
+                        <th> Book Title</th>
+                        <th>Author Name</th>
+                        <th> language</th>
+                        <th> Date Of Publication</th>
+                        <th>price</th>
+                        <th>Type</th>
+                         <td><i class="fa fa-edit btnedit"></i> and<i class="fa fa-trash btndelet"></i>
+                            
+                            </td>
+                        </tr></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </td>
+
+       
     </main>
     <footer>
 
@@ -148,13 +135,13 @@
                 <li><a href="#" class=" fa fa-envelope">&ensp;<samp>Email</samp><br>
                         <p>bookshop20@gmail.com</p>
                     </a></li>
-    
+
             </ul>
         </div>
-    
+
         <div class="footer">
             <div>
-    
+
                 <img class="go" src="/logo.jpg">
             </div>
             <div class="links">
