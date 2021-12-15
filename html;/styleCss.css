@@ -53,34 +53,8 @@ nav {
   color: #ab9ec5;
   padding: 29px;
 }
-#searchbtn{
-    width:500px;
-    height:50px;
-    margin-left:30%;
-    margin-top:50PX;
-    border-radius:18px;
-    font-size: 20px;
-}
-::placeholder{
-    font-family: work sans,sans-serif;
-    font-size: 15px;
-    font-style: italic;
-}
-form.search button {
-  
-  width: 50px;
-  height: 50px;
-  border-radius: 19px;
-  background: #423954;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-}
-form.search button:hover {
-    background: #ab9ec5;
-  }
+
+
 /* foooooooooooooooooooooooooooooooooooooooooooooorm */
 .formation{
   
@@ -88,6 +62,7 @@ form.search button:hover {
     grid-template-columns: auto auto;
 }
 .formation input {
+  margin-left: 40px;
     width:500px;
     height:40px;
     margin-top:50PX;
@@ -102,6 +77,7 @@ form.search button:hover {
     margin-top:50PX;
     border-radius:18px;
     font-size: 20px; 
+    margin-left: 40px;
     background-color: rgba(255, 255, 255, 0.192);
 }
 #formbtn {
@@ -126,6 +102,8 @@ form.search button:hover {
 }
 
 label{
+  margin-left: 14px;
+  margin-right: 20px;
   margin-top:13PX;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
@@ -157,8 +135,9 @@ h4{
 
 
 .fieldset{
+  margin-left: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top:50PX;
   border-radius:18px;
   font-family: sans-serif;
@@ -168,6 +147,7 @@ h4{
  
 }
 .fieldset{
+
   border: 2px solid #5f5f5fe7;
   width:500px ;
   border-radius: 20px;
@@ -191,9 +171,14 @@ h6{
   border-radius:18px;
   font-size: 20px;
   font-style: bold;
-  background-color: #A091C0;
+  background-color: #cec1eb;
+  
 }
-
+.rest{
+  display: grid;
+  grid-template-columns: auto auto ;
+  
+}
 
 /* ffffffffffffffffffffffffffffffffff */
 #output{
@@ -211,12 +196,16 @@ input[type="button" i] {
   border-radius:18px;
   font-size: 20px;
   font-style: bold;
-  background-color: #A091C0;
+  background-color: #eae3f89d;
+ 
+  
 }
 
 table {
+
   margin-top: 10px;
-  background-color: #ab9ec5;
+  background-color: rgb(233 234 239);
+border-radius: 20px ;
   font-family: sans-serif;
   border-collapse: collapse;
   font-size: 25px;
@@ -228,7 +217,7 @@ table {
 
  th {
   
-  border: 1px solid #423954;
+  border: 1px solid #ebd3d3;
   text-align: left;
   padding: 8px;
 }
@@ -251,12 +240,13 @@ table.list{
   margin-left: 10%;
 }
 td, th {
-  border: 1px solid #423954;
+  border: 1px solid #e6dff3;
   text-align: left;
   padding: 8px;
 }
+
 tr:nth-child(even),table.list thead>tr {
-  background-color: #ab9ec5;
+  background-color: #d3d1d8;
 }
 /* foooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooter */
   footer{

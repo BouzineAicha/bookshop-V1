@@ -31,7 +31,7 @@
 
     </nav>
     <main>
-        <form action="" id="form" action="/" method="get" autocomplete="off" onsubmit="onformSubmit()">
+        <form action="" id="form" action="/">
 
             <div class="formation">
                 <div>
@@ -55,9 +55,9 @@
                 <div class="fieldset">
 
 
-                    <input type="radio" name="r" class="radio" />&ensp;<label>Novel</label>
-                    <input type="radio" name="r" class="radio" />&ensp; <label>Essay</label>
-                    <input type="radio" name="r" class="radio" />&ensp; <label>Comic</label>
+                    <input type="radio" name="radio" class="radio" value="Novel" /><label>Novel</label>
+                    <input type="radio" name="radio" class="radio" value="Essay"/> <label>Essay</label>
+                    <input type="radio" name="radio" class="radio" value="Comic"/> <label>Comic</label>
                     <h4 id="mesg5"></h4>
                 </div>
 
@@ -86,16 +86,18 @@
                     <select id="lang">
                         <option value=""> select </option>
                         <option value="English">English</option>
-                        <option value="Arabic">Français</option>
-                        <option value="Frensh">Arabe</option>
+                        <option value="Arabic">arabic</option>
+                        <option value="Frensh">Frensh</option>
                     </select>
                     <h5 id="mesg7"></h5>
                 </div>
             </div>
-
-            <button type="submit" onclick="onFormSubmit()" id="Done">Submit</button>
-            <input type="button" onclick="resetFormm()" value="Reset" id="rest">
-
+            <div class="rest">
+                <div>
+                    <button type="submit" onclick="onFormSubmit()" id="Done">Submit</button>
+                </div>
+                <div> <button type="reset" onclick="resetFormm()" value="Reset" id="rest">Reset</button></div>
+            </div>
 
         </form>
         <td>
@@ -104,14 +106,14 @@
                     <tr>
                         <th> Book Title</th>
                         <th>Author Name</th>
-                        <th> language</th>
+                        <th> Type</th>
                         <th> Date Of Publication</th>
                         <th>price</th>
-                        <th>Type</th>
-                         <td><i class="fa fa-edit btnedit"></i> and<i class="fa fa-trash btndelet"></i>
-                            
-                            </td>
-                        </tr></th>
+                        <th> language</th>
+                        <td><i class="fa fa-edit btnedit"></i> and<i class="fa fa-trash btndelet"></i>
+
+                        </td>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -120,7 +122,7 @@
             </table>
         </td>
 
-       
+
     </main>
     <footer>
 

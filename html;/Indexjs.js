@@ -85,45 +85,8 @@ form.addEventListener("submit", (e) => {
 });
 
 
-// stoy titleeeeeeeeeeeeeeeeeeeeee//
-form.addEventListener("submit", (e) => {
-    let messages = [];
-    if (titlestory.value === "" || titlestory.value === null ) {
-      messages.push("The Title of summary field is not filled out  *");
-    }
-  
-    if (titlestory.value.length >= 30) {
-      messages.push("Name must be Less than 30 characters");
-  
-      errortitlestory.style.color = "red";
-    }
-   
-   
-    
-  
-    if (messages.length > 0) {
-      e.preventDefault();
-      errortitlestory.innerText = messages.join(", ");
-    } else {
-        errortitlestory.innerHTML = "✔";
-        errortitlestory.style.color = "green";
-    }
-  });
-//   Descriptioooooooooooooooooooooooooooooooooooooooooooooooooon//
-form.addEventListener("submit", (e) => {
-    let messages = [];
-    if (textarea.value === "" || textarea.value === null) {
-      messages.push("The description field is not filled out *");
-    }
-  
-    if (messages.length > 0) {
-      e.preventDefault(); 
-      errorDescri.innerText = messages.join(", ");
-    } else {
-        errorDescri.innerHTML = "✔";
-        errorDescri.style.color = "green";
-    }
-  });
+
+
 //   Daaaaaaaaaaaaaaaaaaaaaaaaaateeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee//
 form.addEventListener("submit", (e) => {
     let messages = [];
@@ -179,24 +142,13 @@ errorRadio.style.color = "green";
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // vvkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkM//*
+
 
 
 var selectedRow = null;
 function onFormSubmit(e){
-    event.preventDefault();
+ 
     var formData = readFormData();
     if(selectedRow === null){
 
@@ -205,6 +157,7 @@ function onFormSubmit(e){
     else{
         updateRecord(formData);
     }
+    resetForm();
     }
 
 
@@ -212,11 +165,13 @@ function readFormData() {
   var formData = {};
   formData["title"] = document.getElementById("title").value;
   formData["name"] = document.getElementById("name").value;
-  formData["radio"] = document.getElementsByClassName("radio").value;
+  formData['radio'] = document.querySelector('input[name="radio"]:checked').value;
   formData["date"] = document.getElementById("date").value;
   formData["price"] = document.getElementById("price").value;
   formData["lang"] = document.getElementById("lang").value;
+ 
   return formData;
+
 }
 
 function insertNewRecord(data) {
@@ -234,8 +189,9 @@ function insertNewRecord(data) {
   cell5.innerHTML = data.price;
   cell6 = newRow.insertCell(5);
   cell6.innerHTML = data.lang;
+  
   cell7 = newRow.insertCell(6);
-  cell7.innerHTML = `<input by type="button" onClick="onEdit(this)" value="Edit" >
+  cell7.innerHTML = `<input by type="button" onClick="onEdit(this)" value="Edit"  >
                      <input by type="button" onClick="onDelete(this)" value="Delete">`;
 }
 
@@ -244,27 +200,39 @@ function onEdit(td) {
   selectedRow = td.parentElement.parentElement;
   document.getElementById("title").value = selectedRow.cells[0].innerHTML;
   document.getElementById("name").value = selectedRow.cells[1].innerHTML;
-  document.getElementById("radio").value = selectedRow.cells[4].innerHTML;
-  document.getElementById("date").value = selectedRow.cells[2].innerHTML;
-  document.getElementById("price").value = selectedRow.cells[5].innerHTML;
-  document.getElementById("lang") .value = selectedRow.cells[3].innerHTML;
+  document.getElementsByClassName("radio").value = selectedRow.cells[2].innerHTML;
+  document.getElementById("date").value = selectedRow.cells[3].innerHTML;
+  document.getElementById("price").value = selectedRow.cells[4].innerHTML;
+  document.getElementById("lang") .value = selectedRow.cells[5].innerHTML;
 }
 function updateRecord(formData) {
   selectedRow.cells[0].innerHTML = formData.title;
   selectedRow.cells[1].innerHTML = formData.name;
-  selectedRow.cells[3].innerHTML = formData.radio;
-  selectedRow.cells[2].innerHTML = formData.date;
-  selectedRow.cells[5].innerHTML = formData.price;
-  selectedRow.cells[4].innerHTML  = formData.lang;
+  selectedRow.cells[2].innerHTML = formData.radio;
+  selectedRow.cells[3].innerHTML = formData.date;
+  selectedRow.cells[4].innerHTML = formData.price;
+  selectedRow.cells[5].innerHTML  = formData.lang;
 }
+function resetForm()
+{
+    document.getElementById('title').value = '';
+    document.getElementById('name').value = '';
+    document.getElementsByClassName('radio').value = '';
 
+    document.getElementById('date').value = '';
+    document.getElementById('price').value = '';
+    document.getElementById('lang').value = '';
+
+    selectedRow = null;
+}
 function onDelete(td) {
   if (confirm('Are you sure to delete this record ?')) {
       row = td.parentElement.parentElement;
       document.getElementById("employeeList").deleteRow(row.rowIndex);
-      resetForm();
+       resetForm();
   }
 }
+
 
 function validate() {
   isValid = true;
